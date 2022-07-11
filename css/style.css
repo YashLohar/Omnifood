@@ -604,15 +604,22 @@ body{
 
 /*Form section starts here*/
 
-.formarea{
+.form-area{
+    width: 100%;
+    padding: 5rem 3.2rem;
+}
+.form-section{
     border-radius: 1.1rem;
+    max-width: 1150px;
+    margin: 0 auto;
     justify-content: space-between;
     background-image:linear-gradient(to right bottom, #eb984e, #e67e22);
 }
 
 .form-container{
-    flex-basis: 65%;
+    width: 65%;
     padding: 5.8rem;
+    border-radius: 1.1rem;
 }
 
 .form-container .secondary-heading{
@@ -675,18 +682,18 @@ body{
 }
 
 .eating{
-    flex-basis: 35%;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba(235, 151, 78, 0.35),
-        rgba(230, 125, 34, 0.35)
-      ),
-      url('../img/eating.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 1.1rem;
+    width: 35%;
+    background-image: linear-gradient( to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35) ), url(../img/eating.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
 }
+
+.eating .eating-img{
+    width: 100%;
+}
+
 
 /*Form section ends here*/
 
@@ -855,13 +862,24 @@ body{
         align-content: center;
     }
 
-    .formarea{
-        flex-direction: column;
+    .eating{
+            order: 1;
+            width: 100%;
+            height: 300px;
+            border-top-right-radius: 11px;
+            border-top-left-radius: 11px;
+            border-bottom-right-radius: none;
     }
 
     .form-content{
         flex-direction: column;
     }
+
+    .form-container{
+        order: 2;
+        width: 100%;
+    }
+
 
     .footer-section{
         flex-direction: column;
